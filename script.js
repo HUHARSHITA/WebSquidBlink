@@ -34,7 +34,7 @@ function startGame() {
 
   gameInterval = setInterval(() => {
     isGreenLight = Math.random() > 0.5;
-    doll.src = isGreenLight ? "assets/doll_backk.png" : "assets/doll_frront.png";
+    doll.src = isGreenLight ? "doll_backk.png" : "doll_frront.png";
     lightIndicator.innerText = isGreenLight ? "🟢 Green Light" : "🔴 Red Light";
     isGreenLight ? greenSound.play() : redSound.play();
   }, 2500);
