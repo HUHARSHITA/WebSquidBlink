@@ -91,3 +91,9 @@ function onResults(results) {
     movePlayer();
   }
 }
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
