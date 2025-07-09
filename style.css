@@ -1,9 +1,12 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
-  background: url('assets/bg.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #4CAF50; /* Green */
   color: white;
   display: flex;
   justify-content: center;
@@ -12,7 +15,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 
 .container {
   text-align: center;
@@ -26,7 +28,7 @@ body {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
-  background-image: url('bg.jpg');
+  background-image: url('assets/bg.jpg');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -38,8 +40,9 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 180px;
-  height: 120px;
+  width: 18vw;
+  max-width: 180px;
+  height: auto;
   border: 3px solid white;
   z-index: 10;
   border-radius: 8px;
@@ -49,7 +52,8 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  width: 120px;
+  width: 12vw;
+  max-width: 120px;
   transition: all 0.3s ease;
   z-index: 10;
 }
@@ -58,12 +62,12 @@ body {
   position: absolute;
   bottom: 10px;
   left: 20px;
-  width: 70px;
+  width: 7vw;
+  max-width: 70px;
   height: auto;
   transition: left 0.3s;
   z-index: 10;
 }
-
 
 #light-indicator {
   position: absolute;
@@ -72,7 +76,7 @@ body {
   background: rgba(0,0,0,0.5);
   padding: 10px 15px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 1.2rem;
   z-index: 10;
 }
 
@@ -83,22 +87,45 @@ button {
   border: none;
   border-radius: 8px;
   margin: 10px;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
+button:active {
+  transform: scale(0.96);
+}
+
 #result {
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 10px;
 }
 
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
   #webcam {
     width: 120px;
-    height: 80px;
   }
+
   #doll {
     width: 80px;
+  }
+
+  #player {
+    width: 60px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  #result {
+    font-size: 1.5rem;
   }
 }
