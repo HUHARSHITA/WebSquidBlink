@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Squid Game Blink Challenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🦑 Squid Game Blink Challenge</h1>
+    <div id="game-area">
+      <video id="webcam" autoplay playsinline></video>
+      <canvas id="canvas"></canvas>
+      <img id="doll" src="assets/doll_backk.png" alt="Doll"/>
+      <div id="light-indicator">🟢 Green Light</div>
+      <img id="player" src="assets/player.png" alt="Player" />
+      <div id="bg"></div>
+    </div>
+    <div id="result"></div>
+    <button id="startBtn">Play</button>
+    <button id="restartBtn" style="display:none;">Restart</button>
+  </div>
+
+  <audio id="bgMusic" src="assets/bg_music.mp3" loop></audio>
+  <audio id="winSound" src="assets/win.mp3"></audio>
+  <audio id="eliminatedSound" src="assets/eliminated_sound.mp3"></audio>
+  <audio id="greenSound" src="assets/green_light.mp3"></audio>
+  <audio id="redSound" src="assets/red_light.mp3"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-image: url('assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+#webcam {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  height: 120px;
+  border: 3px solid white;
+  z-index: 10;
+  border-radius: 8px;
+}
+
+#doll {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 120px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+#player {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  width: 70px;
+  height: auto;
+  transition: left 0.3s;
+  z-index: 10;
+}
+
+
+#light-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  z-index: 10;
+}
+
+button {
+  padding: 12px 24px;
+  background: #f14b4b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#result {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  #webcam {
+    width: 120px;
+    height: 80px;
+  }
+  #doll {
+    width: 80px;
+  }
+}
