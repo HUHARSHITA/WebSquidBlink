@@ -22,7 +22,7 @@ body {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
-  background-image: url('assets/bg.jpg');
+  background-image: url('bg.jpg');
   background-size: cover;
   background-position: center;
   overflow: hidden;
